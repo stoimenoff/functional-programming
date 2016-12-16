@@ -88,4 +88,3 @@
 			(stream-cons (car current) (repeat-list2-helper (cdr current)))))
 	(repeat-list1-helper l1))
 
-(define ())
