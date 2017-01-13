@@ -49,4 +49,4 @@ firstColumn xss = map head xss
 
 transpose' :: [[a]] -> [[a]]
 transpose' [] = []
-transpose' xss = appendColumn (head xss) (appendRow (tail (firstColumn xss)) (transpose' (removeFirstRowAndColumn xss)))
+transpose' xss = foldr (zipWith (:)) (repeat []) xss
